@@ -1,8 +1,11 @@
 package com.tematihonov;
 
+import com.sun.org.apache.xpath.internal.operations.Or;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Queue;
 
 public class Main {
 
@@ -21,6 +24,15 @@ public class Main {
         List arrayWithChangeOfIndexes = changeIndexes(transformedArray, 0,4);
         System.out.println(arrayWithChangeOfIndexes);
 
+
+
+
+
+
+
+        //Task 3
+        Box<Orange> orangeBox = new Box<>();
+        Box<Apple> appleBox = new Box<>();
 
     }
 
