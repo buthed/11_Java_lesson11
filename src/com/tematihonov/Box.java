@@ -13,9 +13,6 @@ public class Box<T extends Fruit> {
     public Box(T... object) {
         this.object = new ArrayList<T>(Arrays.asList(object));
     }
-    public ArrayList<T> getItems() {
-        return new ArrayList<T>(object);
-    }
 
     public float getWeight() {
         if (object.size() == 0) return 0;
@@ -25,5 +22,8 @@ public class Box<T extends Fruit> {
     }
     public boolean compare(Box box) {
         return this.getWeight() == box.getWeight();
+    }
+    public void changeBox(Box<? super T> box) {
+        box.object.addAll(this.object);
     }
 }
