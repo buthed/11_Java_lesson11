@@ -13,4 +13,17 @@ public class Box<T extends Fruit> {
     public Box(T... object) {
         this.object = new ArrayList<T>(Arrays.asList(object));
     }
+    public ArrayList<T> getItems() {
+        return new ArrayList<T>(object);
+    }
+
+    public float getWeight() {
+        if (object.size() == 0) return 0;
+        float weight = 0;
+        for (T object: object) weight += object.getWeight();
+        return weight;
+    }
+    public boolean compare(Box box) {
+        return this.getWeight() == box.getWeight();
+    }
 }

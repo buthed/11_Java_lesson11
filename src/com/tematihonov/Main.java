@@ -31,8 +31,17 @@ public class Main {
 
 
         //Task 3
-        Box<Orange> orangeBox = new Box<>();
-        Box<Apple> appleBox = new Box<>();
+        Apple apple1 = new Apple();
+        Apple apple2 = new Apple();
+        Apple apple3 = new Apple();
+        Orange orange1 = new Orange();
+        Orange orange2 = new Orange();
+        Box<Apple> appleBox = new Box<>(apple1, apple2, apple3);
+        Box<Orange> orangeBox = new Box<>(orange1, orange2);
+        System.out.println(appleBox.getWeight());
+        System.out.println(orangeBox.getWeight());
+        System.out.println(appleBox.compare(orangeBox));
+
 
     }
 
@@ -51,5 +60,6 @@ public class Main {
         }
         return transformedArray;
     }
+
 
 }
